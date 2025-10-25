@@ -14,11 +14,11 @@ export default function Home() {
 
     const getRandomWord = useCallback(async () => {
         // const randomIndex = Math.floor(Math.random() * words.length);
-        // const word = words[randomIndex]; // TODO fetch api
+        // const word = words[randomIndex];
 
         const response = await fetch("/api/word");
         const result = await response.json();
-        
+
         setCurrentWord(result.data);
         setSentence('');
         setScore(0);
